@@ -1,66 +1,74 @@
+/* Styles for the forecast title */
 .title {
-    font-size: 23px;
-    font-weight: 700;
-  }
-  
-  .daily-item {
-    background-color: #ebf1f3;
-    border-radius: 15px;
-    height: 40px;
-    margin: 5px;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    font-size: 14px;
-    padding: 5px 20px;
-  }
-  
-  .icon-small {
-    width: 40px;
-  }
-  
-  .daily-item .day {
-    cursor: inherit;
-    color: #212121;
-    flex: 1 1;
-    font-weight: 600;
-    margin-left: 15px;
-  }
-  
-  .description {
-    cursor: inherit;
-    flex: 1 1;
-    margin-right: 15px;
-    text-align: right;
-  }
-  
-  .min-max {
-    color: #757575;
-  }
-  
-  .daily-details-grid {
-    grid-row-gap: 0;
-    grid-column-gap: 15px;
-    -webkit-column-gap: 15px;
-    column-gap: 15px;
-    display: grid;
-    flex: 1 1;
-    grid-template-columns: auto auto;
-    padding: 5px 15px;
-    row-gap: 0;
-  }
-  
-  .daily-details-grid-item {
-    align-items: center;
-    display: flex;
-    height: 30px;
-    justify-content: space-between;
-  }
-  
-  .daily-details-grid-item label:first-child {
-    color: #757575;
-  }
-  
-  .daily-details-grid-item label:last-child {
-    color: #212121;
-  }
+  font-size: 23px; /* Size of the title text */
+  font-weight: 700; /* Bold title text */
+}
+
+/* Styles for each daily weather item */
+.daily-item {
+  background-color: #ebf1f3; /* Light greyish-blue background for each item */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  height: 40px; /* Fixed height for uniformity */
+  margin: 5px; /* Margin around items to prevent them from touching */
+  align-items: center; /* Vertically center content within */
+  cursor: pointer; /* Change cursor to indicate item is clickable */
+  display: flex; /* Use Flexbox for layout */
+  font-size: 14px; /* Text size within each item */
+  padding: 5px 20px; /* Padding inside each item */
+}
+
+/* Styles for the weather icon within each daily item */
+.icon-small {
+  width: 40px; /* Fixed width for icons */
+}
+
+/* Styles for the day label within each daily item */
+.daily-item .day {
+  cursor: inherit; /* Inherits the cursor style from .daily-item */
+  color: #212121; /* Dark grey text color for readability */
+  flex: 1; /* Allows the item to expand and fill available space */
+  font-weight: 600; /* Semi-bold for slight emphasis */
+  margin-left: 15px; /* Space between the icon and the day label */
+}
+
+/* Styles for the weather description within each daily item */
+.description {
+  cursor: inherit; /* Inherits the cursor style from .daily-item */
+  flex: 1; /* Allows the description to expand and fill available space */
+  margin-right: 15px; /* Space on the right of the description */
+  text-align: right; /* Aligns the description text to the right */
+}
+
+/* Styles for the temperature range within each daily item */
+.min-max {
+  color: #757575; /* Grey text color for temperature details */
+}
+
+/* Styles for the grid layout in the accordion panel */
+.daily-details-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: auto auto; /* Two columns of equal width */
+  grid-row-gap: 0; /* No gap between rows */
+  grid-column-gap: 15px; /* Gap between columns */
+  -webkit-column-gap: 15px; /* Gap between columns for Safari */
+  column-gap: 15px; /* Standard gap between columns */
+  padding: 5px 15px; /* Padding inside the grid */
+}
+
+/* Styles for each item in the details grid */
+.daily-details-grid-item {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Vertically center content within each item */
+  justify-content: space-between; /* Space out the labels within each item */
+  height: 30px; /* Fixed height for uniformity */
+}
+
+/* Styles for the first label in each grid item (usually the descriptor) */
+.daily-details-grid-item label:first-child {
+  color: #757575; /* Grey text color for descriptors */
+}
+
+/* Styles for the second label in each grid item (usually the value) */
+.daily-details-grid-item label:last-child {
+  color: #212121; /* Dark grey text color for values */
+}

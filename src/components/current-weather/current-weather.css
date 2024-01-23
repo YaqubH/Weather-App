@@ -1,69 +1,80 @@
+/* Main container style for weather widget */
 .weather {
-    width: 300px;
-    border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
-    color: #212121;
-    background-color: #ebf1f3;
-    margin: 20px auto 0 auto;
-    padding: 0 20px 20px 20px;
-  }
-  
-  .top,
-  .bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .city {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: 1px;
-  }
-  
-  .weather-description {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
-    margin: 0;
-  }
-  
-  .weather-icon {
-    width: 100px;
-  }
-  
-  .temperature {
-    font-weight: 600;
-    font-size: 70px;
-    width: auto;
-    letter-spacing: -5px;
-    margin: 10px 0;
-  }
-  
-  .details {
-    width: 100%;
-    padding-left: 20px;
-  }
-  
-  .parameter-row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .parameter-label {
-    text-align: left;
-    font-weight: 400;
-    font-size: 12px;
-  }
-  
-  .parameter-value {
-    text-align: right;
-    font-weight: 600;
-    font-size: 12px;
-  }
-  
-  .parameter-label.top {
-    border-bottom: 1px solid #fff;
-  }
+  width: 300px; /* Fixed width */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%); /* Shadow for depth */
+  color: #212121; /* Text color */
+  background-color: #ebf1f3; /* Light background color */
+  margin: 20px auto 0 auto; /* Center widget and add margin on top */
+  padding: 0 20px 20px 20px; /* Padding inside the widget */
+}
+
+/* Style for the top and bottom sections inside the weather widget */
+.top,
+.bottom {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out children equally */
+  align-items: center; /* Vertically align children */
+}
+
+/* City name styling */
+.city {
+  font-weight: 600; /* Semi-bold for emphasis */
+  font-size: 18px; /* Size of the city name */
+  line-height: 1; /* Tight line height for compact look */
+  margin: 0; /* Remove default margin */
+  letter-spacing: 1px; /* Slightly space out letters */
+}
+
+/* Weather description text styling */
+.weather-description {
+  font-weight: 400; /* Regular font weight */
+  font-size: 14px; /* Smaller text for description */
+  line-height: 1; /* Tight line height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Weather icon styling */
+.weather-icon {
+  width: 100px; /* Set icon width */
+}
+
+/* Temperature display styling */
+.temperature {
+  font-weight: 600; /* Bold for temperature */
+  font-size: 70px; /* Large font size for emphasis */
+  width: auto; /* Auto width based on content */
+  letter-spacing: -5px; /* Negative letter spacing for compact look */
+  margin: 10px 0; /* Margin around temperature */
+}
+
+/* Container for weather details */
+.details {
+  width: 100%; /* Full width */
+  padding-left: 20px; /* Padding on the left */
+}
+
+/* Row style for each weather parameter */
+.parameter-row {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out label and value */
+}
+
+/* Label styling for parameters */
+.parameter-label {
+  text-align: left; /* Align text to the left */
+  font-weight: 400; /* Regular font weight for label */
+  font-size: 12px; /* Small font size for detail */
+}
+
+/* Value styling for parameters */
+.parameter-value {
+  text-align: right; /* Align text to the right */
+  font-weight: 600; /* Semi-bold for value */
+  font-size: 12px; /* Small font size for detail */
+}
+
+/* Additional style for .parameter-label when used with .top class */
+.parameter-label.top {
+  border-bottom: 1px solid #fff; /* Bottom border, not utilized in provided CSS */
+}

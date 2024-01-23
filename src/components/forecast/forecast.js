@@ -1,3 +1,4 @@
+// Import React and Accordion components from 'react-accessible-accordion'
 import React from "react";
 import {
   Accordion,
@@ -6,22 +7,31 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+// Import specific styles for the forecast component
 import "./forecast.css";
 
+// Array containing the days of the week for display purposes
 const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+// The Forecast component accepts 'data' prop with weather forecast information
 const Forecast = ({ data }) => {
+  // Calculate the current day of the week index (0-6, where 0 is Sunday)
   const dayInAWeek = new Date().getDay();
+  // Rearrange WEEK_DAYS starting from today to the end of the week followed by the days before today
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek));
   
   return (
     <>
+      {/* Title for the forecast section */}
       <label className="title">Daily</label>
+      {/* Accordion component to show daily forecasts; allows all items to be collapsed */}
       <Accordion allowZeroExpanded>
+        {/* Map through the first 7 items of the forecast data to display a week's forecast */}
         {data.list.splice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
             <AccordionItemHeading>
               <AccordionItemButton>
+                {/* Daily weather summary including icon, day of the week, description, and temperature */}
                 <div className="daily-item">
                   <img src={`icons/${item.weather[0].icon}.png`} className="icon-small" alt="weather" />
                   <label className="day">{forecastDays[idx]}</label>
@@ -31,6 +41,7 @@ const Forecast = ({ data }) => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
+              {/* Detailed weather information displayed in a grid layout */}
               <div className="daily-details-grid">
                 <div className="daily-details-grid-item">
                   <label>Pressure:</label>
@@ -54,7 +65,7 @@ const Forecast = ({ data }) => {
                 </div>
                 <div className="daily-details-grid-item">
                   <label>Feels like:</label>
-                  <label>{item.main.feels_like}°C</label>
+                  <label>{Math.round(item.main.feels_like)}°C</label>
                 </div>
               </div>
             </AccordionItemPanel>
@@ -65,4 +76,5 @@ const Forecast = ({ data }) => {
   );
 };
 
+// Export the Forecast component for use in other parts of the application
 export default Forecast;
