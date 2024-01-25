@@ -25,7 +25,7 @@
 /* Styles for the day label within each daily item */
 .daily-item .day {
   cursor: inherit; /* Inherits the cursor style from .daily-item */
-  color: #212121; /* Dark grey text color for readability */
+  color: #000000; /* Dark grey text color for readability */
   flex: 1; /* Allows the item to expand and fill available space */
   font-weight: 600; /* Semi-bold for slight emphasis */
   margin-left: 15px; /* Space between the icon and the day label */
@@ -41,7 +41,7 @@
 
 /* Styles for the temperature range within each daily item */
 .min-max {
-  color: #757575; /* Grey text color for temperature details */
+  color: #000000; /* Grey text color for temperature details */
 }
 
 /* Styles for the grid layout in the accordion panel */
@@ -65,10 +65,10 @@
 
 /* Styles for the first label in each grid item (usually the descriptor) */
 .daily-details-grid-item label:first-child {
-  color: #757575; /* Grey text color for descriptors */
+  color: #000000; /* Grey text color for descriptors */
 }
 
 /* Styles for the second label in each grid item (usually the value) */
 .daily-details-grid-item label:last-child {
-  color: #212121; /* Dark grey text color for values */
+  color: #000000; /* Dark grey text color for values */
 }

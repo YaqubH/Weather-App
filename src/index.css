@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", Arial, sans-serif !important; /* Sets the default font family with Roboto as the primary choice */
   -webkit-font-smoothing: antialiased; /* Enhances the appearance of fonts on macOS and iOS */
   -moz-osx-font-smoothing: grayscale; /* Further smooths fonts on Firefox on macOS */
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); /* Creates a vibrant, multi-color gradient background */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #08a72d); /* Creates a vibrant, multi-color gradient background */
   background-size: 400% 400%; /* Scales the background size to create a dynamic color flow effect */
   animation: gradient 15s ease infinite; /* Animates the background gradient to shift smoothly over 15 seconds indefinitely */
 }
